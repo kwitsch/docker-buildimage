@@ -13,7 +13,11 @@ RUN apk add --no-cache \
     automake \
     autoconf \
     libtool \
-    openssl-dev
+    openssl-dev \
+    musl-dev \
+    go
 WORKDIR /builddir
-COPY glghr.sh .
-RUN chmod +x glghr.sh
+COPY *.sh .
+RUN chmod +x *.sh
+
+#COPY test.go .
