@@ -16,8 +16,9 @@ RUN apk add --no-cache \
     openssl-dev \
     musl-dev \
     go
-WORKDIR /builddir
+WORKDIR /usr/local/bin
 COPY *.sh .
 RUN chmod +x *.sh
+WORKDIR /builddir
 
 #COPY test.go .
