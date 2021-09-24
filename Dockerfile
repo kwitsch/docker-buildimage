@@ -22,4 +22,3 @@ COPY *.sh .
 RUN chmod +x *.sh
 
 WORKDIR /builddir
-RUN go get github.com/ramr/go-reaper
