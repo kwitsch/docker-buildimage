@@ -16,9 +16,10 @@ RUN apk add --no-cache \
     openssl-dev \
     musl-dev \
     go
+
 WORKDIR /usr/local/bin
 COPY *.sh .
-RUN chmod +x *.sh
-WORKDIR /builddir
+RUN chmod +x *.sh ; \
+    go get github.com/ramr/go-reaper
 
-#COPY test.go .
+WORKDIR /builddir
