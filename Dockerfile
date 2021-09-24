@@ -19,7 +19,7 @@ RUN apk add --no-cache \
 
 WORKDIR /usr/local/bin
 COPY *.sh .
-RUN chmod +x *.sh ; \
-    go get github.com/ramr/go-reaper
+RUN chmod +x *.sh
 
 WORKDIR /builddir
+RUN go get github.com/ramr/go-reaper
